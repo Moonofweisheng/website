@@ -38,29 +38,29 @@ export default async () => {
       },
     },
     compatibilityDate: '2024-07-06',
-    nitro: {
-      prerender: {
-        crawlLinks: true,
-      },
-      routeRules: {
-        ...prerenderRoutes.reduce((acc, route) => {
-          acc[route] = { isr: true, prerender: true }
-          return acc
-        }, {} as Record<string, NitroRouteConfig>),
-        ...swrRoutes.reduce((acc, route) => {
-          acc[route] = { swr: true, prerender: true }
-          return acc
-        }, {} as Record<string, NitroRouteConfig>),
-      },
-      netlify: {
-        images: {
-          remote_images: [
-            'https://github.com/.*',
-            'https://img.shields.io/.*',
-          ],
-        },
-      },
-    },
+    // nitro: {
+    //   prerender: {
+    //     crawlLinks: true,
+    //   },
+    //   routeRules: {
+    //     ...prerenderRoutes.reduce((acc, route) => {
+    //       acc[route] = { isr: true, prerender: true }
+    //       return acc
+    //     }, {} as Record<string, NitroRouteConfig>),
+    //     ...swrRoutes.reduce((acc, route) => {
+    //       acc[route] = { swr: true, prerender: true }
+    //       return acc
+    //     }, {} as Record<string, NitroRouteConfig>),
+    //   },
+    //   netlify: {
+    //     images: {
+    //       remote_images: [
+    //         'https://github.com/.*',
+    //         'https://img.shields.io/.*',
+    //       ],
+    //     },
+    //   },
+    // },
     eslint: {
       config: {
         standalone: false,
