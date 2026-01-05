@@ -27,7 +27,7 @@ jobs:
         run: pnpm install
       
       - name: Build project
-        run: pnpm run build
+        run: pnpm generate
       
       - name: Deploy to Tencent EdgeOne Pages
         run: pnpx edgeone pages deploy .output/public -n website -t ${{ secrets.EDGEONE_API_TOKEN }}
