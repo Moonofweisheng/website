@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "pnpm build && pnpx edgeone pages deploy .output/public -n website -t $EDGEONE_API_TOKEN"
+command = "pnpm build && pnpx edgeone pages deploy dist -n website -t $EDGEONE_API_TOKEN"
 
 [build.environment]
 NODE_VERSION = "22"
